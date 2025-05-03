@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel SSH</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-5">
+
+        <h1 class="text-3xl font-bold mb-5">Painel de Comandos</h1>
+
+        <form method="post" class="mb-5">
+            <label class="block mb-2">Comando:</label>
+            <input type="text" name="command" required class="p-2 w-full bg-gray-800 border border-gray-700 rounded">
+            <button type="submit" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Executar</button>
+        </form>
+
+        {% if output %}
+            <h3 class="text-xl font-semibold">Resultado:</h3>
+            <pre class="bg-gray-800 p-3 rounded border border-gray-700">{{ output }}</pre>
+        {% endif %}
+
+        <br>
+        <a href="/logout" class="text-blue-400 hover:underline">Desconectar</a>
+
+        <form method="post" class="mb-5">
+            <input type="hidden" name="command" value="dashboard">
+            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+                Ver Dashboard
+            </button>
+        </form>
+    </div>
+</body>
+</html>
