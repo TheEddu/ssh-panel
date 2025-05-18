@@ -32,7 +32,7 @@ ssh-panel/
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/ssh-panel.git
+   git clone https://github.com/TheEddu/ssh-panel.git
    cd ssh-panel
    ```
 
